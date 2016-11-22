@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>2.0</version>
+    <date>2016-11-22T18:02:24Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template DNS Check Workstation</template>
+            <name>Template DNS Check Workstation</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>DNS Check</name>
+                </application>
+            </applications>
+            <items/>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>DNS Check Discovery</name>
+                    <type>10</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>dnscheck-gather-lld.py[get,{HOST.NAME},ptrNO,ipv6NO,mxNO,txtNO]</key>
+                    <delay>43200</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>5</lifetime>
+                    <description/>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>IPv4 on {#HOSTNAME}: #{#IPV4NUM}</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>dnscheck.ipv4[{#IPV4NUM}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>DNS Check</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>IPv6 on {#HOSTNAME}: #{#IPV6NUM}</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>dnscheck.ipv6[{#IPV6NUM}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>DNS Check</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>MX on {#HOSTNAME}: #{#MXNUM}</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>dnscheck.mx[{#MXNUM}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>DNS Check</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>MX priority on {#HOSTNAME}: #{#MXPRINUM}</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>dnscheck.mxpri[{#MXPRINUM}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>DNS Check</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PTR for IPv4 on {#HOSTNAME}: #{#PTR4NUM}</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>dnscheck.ptr4[{#PTR4NUM}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>DNS Check</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>PTR for IPv6 on {#HOSTNAME}: #{#PTR6NUM}</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>dnscheck.ptr6[{#PTR6NUM}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>DNS Check</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>TXT on {#HOSTNAME}: #{#TXTNUM}</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>dnscheck.txt[{#TXTNUM}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>DNS Check</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ipv4[{#IPV4NUM}].diff(0)}&gt;0 and {Template DNS Check Workstation:dnscheck.ipv4[{#IPV4NUM}].str(TIMEOUT,#2)}=0</expression>
+                            <name>{#HOSTNAME}: IPv4 #{#IPV4NUM} has changed</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description>If value was changed but not to or from 'TIMEOUT'</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ipv4[{#IPV4NUM}].str(NOIPV4)}=1</expression>
+                            <name>{#HOSTNAME}: IPv4 #{#IPV4NUM} have no A record</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ptr4[{#PTR4NUM}].str(MULTIPTR)}=1</expression>
+                            <name>{#HOSTNAME}: IPv4 #{#PTR4NUM} have more than one PTR record</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ptr4[{#PTR4NUM}].str(NOPTR)}=1</expression>
+                            <name>{#HOSTNAME}: IPv4 #{#PTR4NUM} have no PTR record</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ptr4[{#PTR4NUM}].diff(0)}&gt;0</expression>
+                            <name>{#HOSTNAME}: IPv4 #{#PTR4NUM} PTR has changed</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description>TIMEOUT, NOPTR and MULTIPTR will also trigger this.</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ptr4[{#PTR4NUM}].str(TIMEOUT,#2)}=1</expression>
+                            <name>{#HOSTNAME}: IPv4 #{#PTR4NUM} recursive query has timed out</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ipv6[{#IPV6NUM}].diff(0)}&gt;0 and {Template DNS Check Workstation:dnscheck.ipv6[{#IPV6NUM}].str(TIMEOUT,#2)}=0</expression>
+                            <name>{#HOSTNAME}: IPv6 #{#IPV6NUM} has changed</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description>If value was changed but not to or from 'TIMEOUT'</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ipv6[{#IPV6NUM}].str(NOIPV6)}=1</expression>
+                            <name>{#HOSTNAME}: IPv6 #{#IPV6NUM} have no AAAA record</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ptr6[{#PTR6NUM}].str(MULTIPTR)}=1</expression>
+                            <name>{#HOSTNAME}: IPv6 #{#PTR6NUM} have more than one PTR record</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ptr6[{#PTR6NUM}].str(NOPTR)}=1</expression>
+                            <name>{#HOSTNAME}: IPv6 #{#PTR6NUM} have no PTR record</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ptr6[{#PTR6NUM}].diff(0)}&gt;0</expression>
+                            <name>{#HOSTNAME}: IPv6 #{#PTR6NUM} PTR has changed</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description>TIMEOUT, NOPTR and MULTIPTR will also trigger this.</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ptr6[{#PTR6NUM}].str(TIMEOUT,#2)}=1</expression>
+                            <name>{#HOSTNAME}: IPv6 #{#PTR6NUM} recursive query has timed out</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ipv4[{#IPV4NUM}].str(TIMEOUT,#2)}=1</expression>
+                            <name>{#HOSTNAME}: main DNS forward query has timed out</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description>Applies to IPv4, IPv6 and MX.</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.mx[{#MXNUM}].diff(0)}&gt;0 and {Template DNS Check Workstation:dnscheck.mx[{#MXNUM}].str(TIMEOUT,#2)}=0</expression>
+                            <name>{#HOSTNAME}: MX #{#MXNUM} has changed</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description>If value was changed but not to or from 'TIMEOUT'</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.mxpri[{#MXPRINUM}].diff(0)}&gt;0</expression>
+                            <name>{#HOSTNAME}: MX priority on #{#MXPRINUM} has changed</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.mx[{#MXNUM}].str(NOMX)}=1</expression>
+                            <name>{#HOSTNAME}: MX records are not present</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.txt[{#TXTNUM}].diff(0)}&gt;0 and {Template DNS Check Workstation:dnscheck.txt[{#TXTNUM}].str(TIMEOUT,#2)}=0</expression>
+                            <name>{#HOSTNAME}: TXT #{#TXTNUM} has changed</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description>If value was changed but not to or from 'TIMEOUT'</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.txt[{#TXTNUM}].str(TIMEOUT,#2)}=1</expression>
+                            <name>{#HOSTNAME}: TXT DNS forward query has timed out</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description>Applies to TXT.</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.txt[{#TXTNUM}].str(NOTXT)}=1</expression>
+                            <name>{#HOSTNAME}: TXT records are not present</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+            </discovery_rules>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+</zabbix_export>
