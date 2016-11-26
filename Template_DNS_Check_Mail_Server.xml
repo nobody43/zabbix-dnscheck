@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2016-11-22T18:01:02Z</date>
+    <date>2016-11-26T22:30:21Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -29,7 +29,7 @@
                     <type>10</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>dnscheck-gather-lld.py[get,{HOST.NAME},ptrYES,ipv6NO,mxYES,txtYES]</key>
+                    <key>dnscheck-gather-lld.py[get,{HOST.DNS},{HOST.HOST},ptrYES,ipv6NO,mxYES,txtYES]</key>
                     <delay>43200</delay>
                     <status>0</status>
                     <allowed_hosts/>
@@ -361,7 +361,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template DNS Check Mail Server:dnscheck.ipv4[{#IPV4NUM}].diff(0)}&gt;0 and {Template DNS Check Mail Server:dnscheck.ipv4[{#IPV4NUM}].str(TIMEOUT,#2)}=0</expression>
+                            <expression>{Template DNS Check Mail Server:dnscheck.ipv4[{#IPV4NUM}].diff(0)}&gt;0 and {Template DNS Check Mail Server:dnscheck.ipv4[{#IPV4NUM}].str(TIMEOUT,#2)}=0 and {Template DNS Check Mail Server:dnscheck.ipv4[{#IPV4NUM}].str(NODNS,#2)}=0</expression>
                             <name>{#HOSTNAME}: IPv4 #{#IPV4NUM} has changed</name>
                             <url/>
                             <status>0</status>
@@ -528,6 +528,15 @@
                             <url/>
                             <status>0</status>
                             <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Mail Server:dnscheck.ipv4[{#IPV4NUM}].str(NODNS)}=1</expression>
+                            <name>{#HOSTNAME} needs a DNS name configured in Zabbix</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
                             <description/>
                             <type>0</type>
                         </trigger_prototype>

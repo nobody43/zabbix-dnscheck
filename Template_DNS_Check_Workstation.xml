@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2016-11-22T18:02:24Z</date>
+    <date>2016-11-26T22:31:41Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -29,7 +29,7 @@
                     <type>10</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>dnscheck-gather-lld.py[get,{HOST.NAME},ptrNO,ipv6NO,mxNO,txtNO]</key>
+                    <key>dnscheck-gather-lld.py[get,{HOST.DNS},{HOST.HOST},ptrNO,ipv6NO,mxNO,txtNO]</key>
                     <delay>43200</delay>
                     <status>0</status>
                     <allowed_hosts/>
@@ -361,12 +361,12 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template DNS Check Workstation:dnscheck.ipv4[{#IPV4NUM}].diff(0)}&gt;0 and {Template DNS Check Workstation:dnscheck.ipv4[{#IPV4NUM}].str(TIMEOUT,#2)}=0</expression>
+                            <expression>{Template DNS Check Workstation:dnscheck.ipv4[{#IPV4NUM}].diff(0)}&gt;0 and {Template DNS Check Workstation:dnscheck.ipv4[{#IPV4NUM}].str(TIMEOUT,#2)}=0 and {Template DNS Check Workstation:dnscheck.ipv4[{#IPV4NUM}].str(NODNS,#2)}=0</expression>
                             <name>{#HOSTNAME}: IPv4 #{#IPV4NUM} has changed</name>
                             <url/>
                             <status>0</status>
                             <priority>1</priority>
-                            <description>If value was changed but not to or from 'TIMEOUT'</description>
+                            <description/>
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
@@ -528,6 +528,15 @@
                             <url/>
                             <status>0</status>
                             <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template DNS Check Workstation:dnscheck.ipv4[{#IPV4NUM}].str(NODNS)}=1</expression>
+                            <name>{#HOSTNAME} needs a DNS name configured in Zabbix</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
                             <description/>
                             <type>0</type>
                         </trigger_prototype>
