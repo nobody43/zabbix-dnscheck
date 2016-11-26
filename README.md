@@ -1,2 +1,2 @@
 # zabbix-dnscheck
-Work in progress.
+Installation instructions are coming.
