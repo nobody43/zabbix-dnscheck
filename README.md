@@ -24,7 +24,7 @@ It is possible to control what data is gathered by providing arguments to the di
 | sys.argv[7]      | txtYES, txtNO       | TXT. Will spawn additional process.                                                 |
 
 ## Installation
-Requires `python3` and `bind9-host` (Debian) or `bind-utils` (Centos) packages. Uses `host` binary.<br />
+Requires `python3`, `zabbix-sender`, `bind9-host` (Debian) or `bind-utils` (Centos) packages. Uses `host` binary.<br />
 
 Take a look at script's first lines and change values if necessary. Its important to specify `serverIP` (server or proxy) in `dnscheck-send.py`.
 
