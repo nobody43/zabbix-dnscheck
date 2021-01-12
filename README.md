@@ -65,7 +65,8 @@ Verbosely process host `Example mail server` with dns `mail.example.org` gatheri
 <br /><br />
 
 These scripts were tested to work with following configurations:
-- Centos 7 / Zabbix 2.4 / Python 3.4
+- Centos 7 / Zabbix 3.0 / Python 3.4
+- Debian 10 / Zabbix 5.0 / Python 3.7
 
 ## Links
 - http://unlicense.org
